@@ -13,10 +13,9 @@ import net.dv8tion.jda.core.entities.MessageChannel;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-public class Discord extends ListenerAdapter{
+public class Discord  extends ListenerAdapter{
 	
 	private JDA jda;
-	private String token;
 	private String name = "Bot";
 	
 	//Use this constructor if you only have the token
@@ -26,7 +25,7 @@ public class Discord extends ListenerAdapter{
 		} catch (LoginException e) {
 			e.printStackTrace();
 		}
-		this.token = token;
+		
 		waitForConnection();
 	}
 	
@@ -44,10 +43,12 @@ public class Discord extends ListenerAdapter{
 	//Use this constructor if you have already initialised a JDA
 	public Discord(JDA jda) {
 		this.jda = jda;
-		this.token = jda.getToken();
 		waitForConnection();
 	}
 		
+	public JDA getJDA() {
+		return jda;
+	}
 	
 	public boolean isAppOnline() {
 		return jda.getStatus().equals(Status.CONNECTED);
@@ -62,15 +63,6 @@ public class Discord extends ListenerAdapter{
 				e.printStackTrace();
 			}
 		}
-	}
-	
-	public void setUpListenerAdapter() {
-		jda.addEventListener(this);
-	}
-	
-	@Override
-    public void onMessageReceived(MessageReceivedEvent evt) {
-		App.messageEvent(evt);
 	}
 	
 	public void setName(String name) {
@@ -126,6 +118,11 @@ public class Discord extends ListenerAdapter{
 			//Exception found, return false.
 			return false;
 		}
+	}
+	
+	@Override
+    public void onMessageReceived(MessageReceivedEvent evt) {
+		App.messageEvent(evt);
 	}
 	
 	

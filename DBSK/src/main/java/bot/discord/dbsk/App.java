@@ -1,9 +1,10 @@
 package bot.discord.dbsk;
 
 import discord.Discord;
+import discord.Music;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
-//DBSK v1.0.2
+//DBSK v1.0.1
 
 /* GUIDE ON HOW TO USE THIS STARTER KIT
  * 
@@ -39,8 +40,7 @@ import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 public class App 
 {
 	//Declare the variable discord, making it static so we can use it in other methods.
-	static Discord discord;
-	
+	public static Discord discord;
     public static void main( String[] args ){    	
     	//Initialise the Discord Bot with your token.
     	discord = new Discord("TOKEN");
@@ -50,6 +50,10 @@ public class App
     	
 		//Send a message.
 		discord.sendMessage(discord.getStatusMessage());
+		
+		//Set up Music
+		Music.setDiscord(discord);
+		Music.configureMusic();
     }
     
     public static void messageEvent(MessageReceivedEvent evt) {
