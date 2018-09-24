@@ -1,5 +1,8 @@
 ![DBSK Logo](assets/dbsk_isometric_poster.png)
 
+### [Click here to go to the VikingsDev website](https://vikingsdev.github.io/)</br>
+### [Click here to go to the lesson info](https://github.com/VikingsDev/Project-Discord-Bot)
+
 # Description
 Hello! This is a starter kit made by me, FrankWhoee on GitHub! Here's the link to my profile: https://github.com/FrankWhoee 
 
@@ -7,7 +10,7 @@ This starter kit is not meant to do everything for you, but merely to provide so
 
 # Instructions
 
-## Prerequisites
+### Prerequisites
 * You must have a Discord Account.
 
 1. Start by downloading the latest version of DBSK in the directory DBSK_Versions
