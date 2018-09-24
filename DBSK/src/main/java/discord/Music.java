@@ -68,7 +68,7 @@ public class Music {
 		player = playerManager.createPlayer();
 		trackScheduler = new TrackScheduler(player);
 		player.addListener(trackScheduler);
-		AudioHandlers = new ArrayList<>();
+		AudioHandlers = new ArrayList<AudioPlayerSendHandler>();
 	}
 	
 	//Join channel by channel id.

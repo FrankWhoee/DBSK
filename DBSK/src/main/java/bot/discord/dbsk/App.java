@@ -3,6 +3,7 @@ package bot.discord.dbsk;
 import discord.Discord;
 import discord.Music;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.events.message.react.MessageReactionAddEvent;
 
 //DBSK v1.0.1
 
@@ -15,7 +16,7 @@ import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
  * BNSS Coding Club members, but anyone can use this.
  * 
  * INSTRUCTIONS FOR NON-BNSS CODING CLUB MEMBERS:
- * Some of the constants are set specifically for BNSS Coding Club, but if you are a part of that, then you should
+ * Some of the constants are set specifically for BNSS Coding Club, but if you are not part of that, then you should
  * go to the Constants.java file in the package discord, and change Line 9. It's the id for the text channel where messages are sent
  * by default, and it's the id for a channel in our own server, so you'll have to create your own server and text channel, copy the id
  * of the text channel and replace 485449484705202186 with your own id.
@@ -31,7 +32,7 @@ import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
  * 3. Customise your application, then go to the Bot section by clicking on 'Bot' on the menu on the left
  * 4. Click 'Add Bot' and confirm by clicking 'Yes, do it!'
  * 5. Click 'Click to Reveal Token' and copy it. 
- * 6. Go to Line 45 in this file and replace TOKEN with your copied token.
+ * 6. Go to Line 47 in this file and replace TOKEN with your copied token.
  * 
  * WARNING:
  * NEVER reveal your token to anyone but your people who you are collaborating with. Do not post it online where anyone can see the token!
@@ -54,10 +55,16 @@ public class App
 		//Set up Music
 		Music.setDiscord(discord);
 		Music.configureMusic();
+
     }
     
     public static void messageEvent(MessageReceivedEvent evt) {
     	//When a message is sent, this method will be called.
     	//evt contains all the information you need about the message.
+    }
+    
+    public static void emojiEvent(MessageReactionAddEvent evt) {
+    	//When an emoji is added to a message, this method will be called.
+    	//evt contains all the information you need about the emoji.
     }
 }
