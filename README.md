@@ -17,3 +17,7 @@ This starter kit is not meant to do everything for you, but merely to provide so
 1. Unzip the file.
 1. Open the project in your preferred IDE. Eclipse is recommended.
 1. Follow instructions in App.java
+
+### Known Issues
+* Netbeans can not find the main class #1
+  * Right click on your project, click `Properties`, go to `Run` on the left, and paste `bot.discord.dbsk.App` in `Main Class:`
