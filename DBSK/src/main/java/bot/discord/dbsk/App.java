@@ -62,7 +62,6 @@ public class App
     public static void messageEvent(MessageReceivedEvent evt) {
     	//When a message is sent, this method will be called.
     	//evt contains all the information you need about the message.
-        System.out.println(evt.getMessage().getContentRaw());
     }
     
     public static void emojiEvent(MessageReactionAddEvent evt) {
