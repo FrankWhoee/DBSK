@@ -10,5 +10,11 @@ public class Constants {
 	
 	//Default format for dates.
 	public static final DateFormat DEFAULT_DATE_FORMAT = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        
+        //Token that is read from the local file token.json
+        public static final String TOKEN;
+        static{
+            TOKEN = TokenReader.getToken();
+        }
 	
 }

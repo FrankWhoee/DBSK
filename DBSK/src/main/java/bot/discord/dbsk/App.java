@@ -1,5 +1,6 @@
 package bot.discord.dbsk;
 
+import discord.Constants;
 import discord.Discord;
 import discord.Music;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
@@ -32,7 +33,7 @@ import net.dv8tion.jda.core.events.message.react.MessageReactionAddEvent;
  * 3. Customise your application, then go to the Bot section by clicking on 'Bot' on the menu on the left
  * 4. Click 'Add Bot' and confirm by clicking 'Yes, do it!'
  * 5. Click 'Click to Reveal Token' and copy it. 
- * 6. Go to Line 47 in this file and replace TOKEN with your copied token.
+ * 6. Go to the token.json file in your DBSK folder, and replace Insert token. with your token.
  * 
  * WARNING:
  * NEVER reveal your token to anyone but your people who you are collaborating with. Do not post it online where anyone can see the token!
@@ -44,23 +45,24 @@ public class App
 	public static Discord discord;
     public static void main( String[] args ){    	
     	//Initialise the Discord Bot with your token.
-    	discord = new Discord("TOKEN");
+    	discord = new Discord(Constants.TOKEN);
 		
     	//Set name
     	discord.setName("Discord Bot Starter Kit");
     	
-		//Send a message.
-		discord.sendMessage(discord.getStatusMessage());
-		
-		//Set up Music
-		Music.setDiscord(discord);
-		Music.configureMusic();
+        //Send a message.
+        discord.sendMessage(discord.getStatusMessage());
+
+        //Set up Music
+        Music.setDiscord(discord);
+        Music.configureMusic();
 
     }
     
     public static void messageEvent(MessageReceivedEvent evt) {
     	//When a message is sent, this method will be called.
     	//evt contains all the information you need about the message.
+        System.out.println(evt.getMessage().getContentRaw());
     }
     
     public static void emojiEvent(MessageReactionAddEvent evt) {
