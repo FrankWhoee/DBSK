@@ -9,7 +9,7 @@ Hello! This is a starter kit made by me, FrankWhoee on GitHub! Here's the link t
 This starter kit is not meant to do everything for you, but merely to provide some starting ground to begin your adventure.You can use this kit however you like, and feel free to dive into the Discord.java file to change and make your bot even better! I encourage you to play around with the JDA class in there, after you are familiar with Java and JDA. This starter kit is made for BNSS Coding Club members, but anyone can use this. However, there are some modifications that must be made before you use the starter kit if you're not from BNSS Coding Club. To see the changes that must be made, read the instructions in App.java.
 
 # Instructions
-**Latest stable version [v1.0.6](https://github.com/VikingsDev/DBSK/blob/master/DBSK_Versions/DBSK_v1.0.6.zip)**
+**Latest stable version [v2.0.1](https://github.com/VikingsDev/DBSK/blob/master/DBSK_Versions/DBSK_v2.0.1.zip)**
 ### Prerequisites
 * You must have a Discord Account.
 
